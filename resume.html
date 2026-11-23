@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamila Osmanova | Creative Strategist CV</title>
+<meta name="description" content="CV of Kamila Osmanova, creative strategist for health & wellness brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --paper: #111114;
+    --surface: #18181c;
+    --line: rgba(255, 255, 255, 0.09);
+    --text: #ecebe6;
+    --soft: #c9c7c1;
+    --muted: #8f8d88;
+    --accent: #e3cfa6;
+    --serif: "Instrument Serif", Georgia, serif;
+    --sans: "Inter", system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+
+  /* screen toolbar */
+  .toolbar {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 20px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+  }
+  .toolbar a.back { color: var(--muted); }
+  .toolbar a.back:hover { color: var(--text); }
+  .toolbar .dl {
+    background: var(--accent);
+    color: #141210;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+
+  /* the A4 sheet */
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 40px;
+    background: var(--paper);
+    display: grid;
+    grid-template-columns: 66mm 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .sheet::before {
+    content: "";
+    position: absolute;
+    top: -60mm; right: -40mm;
+    width: 140mm; height: 140mm;
+    background: radial-gradient(circle, rgba(227, 207, 166, 0.08), transparent 60%);
+    pointer-events: none;
+  }
+
+  /* side column */
+  .side {
+    background: var(--surface);
+    border-right: 1px solid var(--line);
+    padding: 14mm 8mm 12mm 9mm;
+    position: relative;
+    z-index: 1;
+  }
+  .photo {
+    width: 30mm; height: 30mm;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(227, 207, 166, 0.4);
+    margin-bottom: 8mm;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; display: block; }
+  .side h3 {
+    font-size: 7.5pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 7mm 0 2.5mm;
+  }
+  .side h3:first-of-type { margin-top: 0; }
+  .side p, .side li { font-size: 8.6pt; line-height: 1.55; color: var(--soft); }
+  .side ul { list-style: none; }
+  .side li { padding: 0.6mm 0; }
+  .side .contact li { word-break: break-word; }
+  .side .contact a:hover { color: var(--accent); }
+  .side .lang b { color: var(--text); font-weight: 500; }
+
+  /* main column */
+  .main { padding: 14mm 12mm 12mm 11mm; position: relative; z-index: 1; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 3mm;
+    font-size: 7.5pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .eyebrow::before { content: ""; width: 6mm; height: 1px; background: var(--accent); }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 38pt;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    margin: 3mm 0 2mm;
+  }
+  h1 em { color: var(--accent); }
+  .role { font-size: 10pt; color: var(--soft); margin-bottom: 6mm; }
+
+  .intro {
+    font-family: var(--serif);
+    font-size: 14pt;
+    line-height: 1.35;
+    color: var(--text);
+    padding: 5mm 5.5mm;
+    border-left: 2px solid var(--accent);
+    background: rgba(255, 255, 255, 0.025);
+    border-radius: 0 3mm 3mm 0;
+  }
+  .intro em { color: var(--accent); }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 17pt;
+    margin: 8mm 0 3.5mm;
+    display: flex;
+    align-items: baseline;
+    gap: 3mm;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); transform: translateY(-1.5mm); }
+
+  .job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .job-top b { font-size: 10.5pt; font-weight: 600; }
+  .job-top span { font-size: 8pt; color: var(--accent); white-space: nowrap; }
+  .job-sub { font-size: 8.8pt; color: var(--muted); margin: 0.8mm 0 2.5mm; }
+  .bullets { list-style: none; }
+  .bullets li {
+    position: relative;
+    padding-left: 5mm;
+    font-size: 9pt;
+    line-height: 1.5;
+    color: var(--soft);
+    margin-bottom: 1.4mm;
+  }
+  .bullets li::before { content: ""; position: absolute; left: 0; top: 2.3mm; width: 2.6mm; height: 1px; background: var(--accent); }
+  .bullets li b { color: var(--text); font-weight: 500; }
+
+  .work { display: grid; gap: 2.2mm; }
+  .work a {
+    display: grid;
+    grid-template-columns: 8mm 1fr;
+    gap: 2mm;
+    padding: 3mm 4mm;
+    border: 1px solid var(--line);
+    border-radius: 2.5mm;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .work a:hover { border-color: rgba(227, 207, 166, 0.4); }
+  .work .n { font-family: var(--serif); font-size: 13pt; color: rgba(227, 207, 166, 0.7); line-height: 1.1; }
+  .work b { font-family: var(--serif); font-weight: 400; font-size: 12pt; display: block; line-height: 1.15; }
+  .work small { font-size: 8pt; color: var(--muted); }
+
+  .footer-line {
+    margin-top: 7mm;
+    font-size: 8pt;
+    color: var(--muted);
+  }
+  .footer-line a { color: var(--accent); }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid var(--line);
+    border-radius: 2.5mm;
+    overflow: hidden;
+  }
+  .steps div { padding: 3.5mm 3mm 4mm; border-right: 1px solid var(--line); background: rgba(255, 255, 255, 0.02); }
+  .steps div:last-child { border-right: none; }
+  .steps span { display: block; font-size: 7pt; letter-spacing: 0.14em; color: var(--accent); }
+  .steps b { display: block; font-family: var(--serif); font-weight: 400; font-size: 13pt; margin: 1.5mm 0 1mm; }
+  .steps small { display: block; font-size: 7.6pt; line-height: 1.4; color: var(--muted); }
+
+  .portfolio-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4mm;
+    padding: 5mm 6mm;
+    border-radius: 3mm;
+    border: 1px solid rgba(227, 207, 166, 0.45);
+    background: linear-gradient(120deg, rgba(227, 207, 166, 0.12), rgba(227, 207, 166, 0.02) 70%);
+  }
+  .portfolio-link b { display: block; font-family: var(--serif); font-weight: 400; font-size: 20pt; color: var(--accent); line-height: 1.1; }
+  .portfolio-link small { display: block; font-size: 8.6pt; color: var(--soft); margin-top: 1.2mm; }
+  .portfolio-link i { font-style: normal; font-size: 20pt; color: var(--accent); }
+
+  @media print {
+    @page { size: A4; margin: 0; }
+    body { background: var(--paper); }
+    .toolbar { display: none; }
+    .sheet { margin: 0; }
+  }
+
+  /* phones: stack the columns */
+  @media screen and (max-width: 820px) {
+    .sheet { width: 100%; min-height: 0; grid-template-columns: 1fr; }
+    .side { border-right: none; border-bottom: 1px solid var(--line); padding: 28px 16px; }
+    .main { padding: 28px 16px 36px; }
+    h1 { font-size: 44px; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .steps div { border-bottom: 1px solid var(--line); }
+    .portfolio-link b { font-size: 22px; }
+    .intro { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <a href="index.html" class="back">← Back to portfolio</a>
+    <a href="assets/Kamila-Osmanova-CV.pdf" class="dl" download>Download PDF</a>
+  </div>
+
+  <div class="sheet">
+
+    <!-- SIDE -->
+    <aside class="side">
+      <div class="photo"><img src="assets/kamila-hero.jpg" alt="Kamila"></div>
+
+      <h3>Contact</h3>
+      <ul class="contact">
+        <li><a href="mailto:kamila.copy.hq@gmail.com">kamila.copy.hq@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/kamila-osmanova" target="_blank" rel="noopener">linkedin.com/in/kamila-osmanova</a></li>
+        <li><a href="https://kamila-creative.github.io" target="_blank" rel="noopener">kamila-creative.github.io</a></li>
+        <li>Vilnius, Lithuania · Open to remote</li>
+      </ul>
+
+      <h3>What I do</h3>
+      <ul>
+        <li>Customer &amp; review research</li>
+        <li>Angle development</li>
+        <li>Creative briefs</li>
+        <li>Hook writing &amp; hook tests</li>
+        <li>UGC creator direction</li>
+        <li>Static ad concepts &amp; design</li>
+        <li>Ad performance analysis</li>
+        <li>Meta ads</li>
+        <li>Advertorials &amp; listicles</li>
+      </ul>
+
+      <h3>Numbers I read on Mondays</h3>
+      <ul>
+        <li>Hook rate &amp; hold rate</li>
+        <li>CTR &amp; CPC</li>
+        <li>Conversion rate &amp; CPA</li>
+        <li>ROAS</li>
+      </ul>
+
+      <h3>Languages</h3>
+      <ul class="lang">
+        <li><b>Lithuanian</b> · native</li>
+        <li><b>English</b> · fluent</li>
+        <li><b>Russian</b> · fluent</li>
+      </ul>
+
+      <h3>Looking for</h3>
+      <ul>
+        <li>Creative strategist</li>
+        <li>Performance creative</li>
+      </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <span class="eyebrow">Creative Strategist · Health &amp; Wellness</span>
+      <h1>Kamila <em>Osmanova</em></h1>
+      <p class="role">I turn customer research into briefs worth testing.</p>
+
+      <p class="intro">
+        I was never a Monday person. Then I started working in performance marketing, and Monday became
+        my favorite day, because that's when the numbers came in. Now I want that loop to be the whole job:
+        <em>more concepts, more tests, more Mondays.</em>
+      </p>
+
+      <h2>Experience</h2>
+      <div class="job-top">
+        <b>Health and Wellness Media</b>
+        <span>Apr 2026 – Nov 2026</span>
+      </div>
+      <p class="job-sub">Junior Conversion Copywriter · Performance agency</p>
+      <ul class="bullets">
+        <li>Took <b>10+ health &amp; wellness brands</b> from first research to live Meta campaigns, owning the research, angles and copy.</li>
+        <li>Ran the research behind every project: product-market fit, awareness levels, competitor winners, and customer sentiment from Reddit and reviews.</li>
+        <li>Built <b>several strategic angles per brand</b> for clients to choose from before anything was made.</li>
+        <li>Read ad testing data to find what wasn't converting, then reworked it and sent it back into testing.</li>
+        <li>Wrote advertorials, listicles and cold-traffic hooks, and designed visuals for image ads on Meta.</li>
+      </ul>
+
+      <h2>How I work</h2>
+      <div class="steps">
+        <div><span>01</span><b>Research</b><small>Reviews, Reddit, competitor winners</small></div>
+        <div><span>02</span><b>Insight</b><small>What she believes and already tried</small></div>
+        <div><span>03</span><b>Hypothesis</b><small>A bet with a metric attached</small></div>
+        <div><span>04</span><b>Brief</b><small>Hooks, format, script, direction</small></div>
+        <div><span>05</span><b>Test</b><small>Scale, fix or kill, then brief again</small></div>
+      </div>
+
+      <h2>Portfolio</h2>
+      <a class="portfolio-link" href="https://kamila-creative.github.io" target="_blank" rel="noopener">
+        <span>
+          <b>kamila-creative.github.io</b>
+          <small>Strategy case studies, creative briefs, hook tests and static ads</small>
+        </span>
+        <i>→</i>
+      </a>
+    </main>
+
+  </div>
+
+</body>
+</html>
