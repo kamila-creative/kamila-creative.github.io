@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hormone Harmony statics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;600;700;800&display=block" rel="stylesheet">
+<style>
+  :root {
+    --pink: #fed2dd;
+    --plum: #3a0b25;
+    --deep: #24071a;
+    --hot: #ff3d8b;
+    --photo: url("https://eu.happymammoth.com/cdn/shop/files/EU-HH-slide-1.jpg?width=1600");
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; }
+  .ad { display: none; position: relative; width: 1080px; height: 1350px; overflow: hidden; font-family: "Montserrat", sans-serif; }
+  body[data-ad="1"] .ad1, body[data-ad="2"] .ad2, body[data-ad="3"] .ad3 { display: block; }
+  .photo { position: absolute; background: var(--photo) center / cover no-repeat; }
+  .anton { font-family: "Anton", sans-serif; text-transform: uppercase; line-height: 0.95; }
+  .cta {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: 2px;
+    padding: 26px 64px;
+    border-radius: 999px;
+  }
+
+  /* =========================================================
+     AD 1 — pink, big product
+     ========================================================= */
+  .ad1 { background: var(--pink); color: var(--plum); }
+  .ad1 .photo {
+    width: 1080px; height: 1080px;
+    left: 0; top: 40px;
+    -webkit-mask-image:
+      linear-gradient(to bottom, transparent 18%, #000 30%, #000 80%, transparent 92%),
+      linear-gradient(to right, transparent 4%, #000 14%, #000 86%, transparent 96%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to bottom, transparent 18%, #000 30%, #000 80%, transparent 92%),
+      linear-gradient(to right, transparent 4%, #000 14%, #000 86%, transparent 96%);
+    mask-composite: intersect;
+  }
+  .ad1 .headline { position: absolute; top: 60px; left: 0; right: 0; display: flex; flex-direction: column; align-items: center; z-index: 2; }
+  .ad1 .h1 { font-size: 78px; letter-spacing: 1px; }
+  .ad1 .h2 {
+    margin-top: 14px;
+    font-size: 176px;
+    letter-spacing: 1px;
+    color: #fff;
+    background: var(--plum);
+    padding: 10px 34px 4px;
+    transform: rotate(-2deg);
+    box-shadow: 14px 14px 0 var(--hot);
+  }
+  .ad1 .bottom { position: absolute; left: 0; right: 0; bottom: 60px; text-align: center; padding: 0 80px; z-index: 2; }
+  .ad1 .body { font-size: 33px; line-height: 1.38; font-weight: 600; max-width: 900px; margin: 0 auto 34px; }
+  .ad1 .body b { font-weight: 800; }
+  .ad1 .cta { background: var(--hot); color: #fff; box-shadow: 0 8px 0 var(--plum); }
+
+  /* =========================================================
+     AD 2 — dark plum, angry, stacked headline, glowing jar right
+     ========================================================= */
+  .ad2 { background: #3a0b25; color: #fff; }
+  .ad2 .bottle {
+    position: absolute;
+    left: 470px; top: 655px;
+    width: 590px;
+    height: auto;
+    filter:
+      drop-shadow(0 0 50px rgba(255, 61, 139, 0.35))
+      drop-shadow(0 30px 40px rgba(0, 0, 0, 0.45));
+  }
+  .ad2 .headline { position: absolute; top: 56px; left: 60px; right: 60px; z-index: 2; }
+  .ad2 .small { font-size: 96px; color: #fff; letter-spacing: 1px; }
+  .ad2 .big { font-size: 196px; color: var(--hot); letter-spacing: 1px; }
+  .ad2 .left { position: absolute; left: 60px; bottom: 64px; width: 480px; z-index: 2; }
+  .ad2 .body { font-size: 32px; line-height: 1.4; font-weight: 600; margin-bottom: 40px; color: #f6dbe6; }
+  .ad2 .body b { color: #fff; font-weight: 800; }
+  .ad2 .cta { background: var(--hot); color: #fff; padding: 24px 46px; font-size: 36px; box-shadow: 0 8px 0 #000; }
+
+  /* =========================================================
+     AD 3 — night sky into pink, giant 3:07
+     ========================================================= */
+  .ad3 {
+    background: linear-gradient(to bottom, #3a1638 0%, #6b3460 34%, #d697b3 66%, #f6c3d2 84%, var(--pink) 100%);
+    color: #fff;
+  }
+  .ad3 .stars span { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #fff; opacity: 0.7; }
+  .ad3 .moon {
+    position: absolute; top: 270px; right: 110px;
+    width: 90px; height: 90px; border-radius: 50%;
+    box-shadow: 22px -6px 0 0 #ffd9e6;
+    transform: rotate(-20deg);
+  }
+  .ad3 .clock {
+    position: absolute; left: 0; right: 0; top: 250px;
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    font-size: 440px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.07);
+    letter-spacing: 6px;
+  }
+  .ad3 .photo {
+    width: 880px; height: 880px;
+    left: 100px; top: 178px;
+    -webkit-mask-image: radial-gradient(ellipse 34% 44% at 50% 56%, #000 50%, transparent 100%);
+    mask-image: radial-gradient(ellipse 34% 44% at 50% 56%, #000 50%, transparent 100%);
+  }
+  .ad3 .headline { position: absolute; top: 56px; left: 0; right: 0; display: flex; flex-direction: column; align-items: center; z-index: 2; text-align: center; }
+  .ad3 .h1 { font-size: 80px; letter-spacing: 1px; color: #fff; }
+  .ad3 .h2 { font-size: 160px; letter-spacing: 1px; color: #ff6fa8; line-height: 0.92; text-shadow: 7px 7px 0 #2a0f2b; }
+  .ad3 .h2:first-of-type { margin-top: 12px; }
+  .ad3 .bottom { position: absolute; left: 0; right: 0; bottom: 60px; text-align: center; padding: 0 80px; z-index: 2; color: var(--plum); }
+  .ad3 .body { font-size: 31px; line-height: 1.38; font-weight: 600; max-width: 900px; margin: 0 auto 34px; }
+  .ad3 .body b { font-weight: 800; }
+  .ad3 .cta { background: var(--plum); color: #fff; box-shadow: 0 8px 0 var(--hot); }
+</style>
+</head>
+<body>
+
+  <!-- AD 1 -->
+  <div class="ad ad1">
+    <div class="photo"></div>
+    <div class="headline anton">
+      <div class="h1 fit" data-max="960">Menopause stole your sleep?</div>
+      <div class="h2">Take it back.</div>
+    </div>
+    <div class="bottom">
+      <p class="body">Nobody's going to hand your sleep back to you, so it's time to take it. <b>Hormone Harmony</b> is made for women who are done with broken nights, and most feel the difference in just 9 days.</p>
+      <span class="cta">START TONIGHT →</span>
+    </div>
+  </div>
+
+  <!-- AD 2 -->
+  <div class="ad ad2">
+    <img class="bottle" src="bottle-src.webp" alt="Hormone Harmony bottle">
+    <div class="headline anton">
+      <div class="small">Hot flashes?</div>
+      <div class="small">3 AM wakings?</div>
+      <div class="big">F*ck you,</div>
+      <div class="big">menopause.</div>
+    </div>
+    <div class="left">
+      <p class="body">Menopause has had your nights long enough. <b>Hormone Harmony</b> is how women are fighting back, and most feel the difference in just 9 days.</p>
+      <span class="cta">START TONIGHT →</span>
+    </div>
+  </div>
+
+  <!-- AD 3 -->
+  <div class="ad ad3">
+    <div class="photo"></div>
+    <div class="headline anton">
+      <div class="h1 fit" data-max="980">When was the last time menopause let you</div>
+      <div class="h2 fit" data-max="980" style="margin-top: 14px;">sleep through</div>
+      <div class="h2 fit" data-max="980">the night?</div>
+    </div>
+    <div class="bottom">
+      <p class="body">If you can't remember, you're not alone, and you don't have to just live with it. Thousands of women have stopped waiting menopause out and started taking <b>Hormone Harmony</b> instead, and most feel the difference in just 9 days.</p>
+      <span class="cta">START TONIGHT →</span>
+    </div>
+  </div>
+
+<script>
+  const n = new URLSearchParams(location.search).get("ad") || "1";
+  document.body.dataset.ad = n;
+
+
+  // shrink headline lines that are too wide
+  document.fonts.ready.then(() => {
+    document.querySelectorAll(".ad" + n + " .fit").forEach(el => {
+      el.style.display = "inline-block";
+      el.style.whiteSpace = "nowrap";
+      let size = parseFloat(getComputedStyle(el).fontSize);
+      const max = +el.dataset.max;
+      while (el.scrollWidth > max && size > 40) { size -= 2; el.style.fontSize = size + "px"; }
+    });
+  });
+</script>
+</body>
+</html>
