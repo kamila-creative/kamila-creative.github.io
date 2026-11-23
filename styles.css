@@ -382,6 +382,7 @@ h1 {
 .contact h2 { font-size: clamp(48px, 7vw, 96px); max-width: 900px; margin: 22px auto 24px; }
 .contact .lead { margin: 0 auto; }
 .contact .hero-cta { justify-content: center; }
+.email-line { margin-top: 22px; font-size: 15px; color: var(--muted); user-select: all; }
 
 footer { border-top: 1px solid var(--line); padding: 32px 0; font-size: 13px; color: var(--muted); }
 footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
